@@ -8,11 +8,11 @@ function App() {
             onComplete={(data) => {
                 if (/Mobi/i.test(window.navigator.userAgent)) {
                     if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
-                        globalThis.webkit.messageHandlers.postData.postMessage(
+                        globalThis.webkit.messageHandlers.iOS.postMessage(
                             JSON.stringify(data)
                         );
                     else {
-                        globalThis.postData(JSON.stringify(data));
+                        globalThis.android.postData(JSON.stringify(data));
                     }
                 }
             }}
