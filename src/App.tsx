@@ -7,11 +7,11 @@ function App() {
             onComplete={(data) => {
                 if (/Mobi/i.test(window.navigator.userAgent)) {
                     if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
-                        globalThis.webkit.messageHandlers.webview.postMessage(
+                        globalThis.webkit.messageHandlers.postData.postMessage(
                             data
                         );
                     else {
-                        globalThis.webview.test(data);
+                        globalThis.webview.postData(data);
                     }
                 }
             }}
