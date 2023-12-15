@@ -12,7 +12,7 @@ function App() {
                             JSON.stringify(data)
                         );
                     else {
-                        globalThis.webview.postMessage(JSON.stringify(data));
+                        globalThis.postData.postMessage(JSON.stringify(data));
                     }
                 }
             }}
