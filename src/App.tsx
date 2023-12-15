@@ -9,10 +9,10 @@ function App() {
                 if (/Mobi/i.test(window.navigator.userAgent)) {
                     if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
                         globalThis.webkit.messageHandlers.postData.postMessage(
-                            data.toString()
+                            data
                         );
                     else {
-                        globalThis.webview.postMessage(data.toString());
+                        globalThis.webview.postMessage(data);
                     }
                 }
             }}
