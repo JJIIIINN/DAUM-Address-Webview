@@ -5,7 +5,7 @@ function App() {
     return (
         <DaumPostcode
             style={{ width: "100vw", height: "100vh" }}
-            onComplete={(data) => {
+            onComplete={() => {
                 if (/Mobi/i.test(window.navigator.userAgent)) {
                     if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
                         globalThis.webkit.messageHandlers.postData.postMessage(
