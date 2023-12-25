@@ -8,7 +8,7 @@ function App() {
             onComplete={(data) => {
                 if (/Mobi/i.test(window.navigator.userAgent)) {
                     if (/iPhone|iPad|iPod/i.test(navigator.userAgent))
-                        globalThis.webkit.messageHandlers.iOS.postMessage(
+                        globalThis.webkit.messageHandlers.iOS.postMessa(
                             JSON.stringify(data)
                         );
                     else {
