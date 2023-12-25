@@ -19,10 +19,12 @@ function App() {
                             JSON.stringify(data)
                         );
                     else {
-                        globalThis.webkit.messageHandlers.callBackHandler.postMessage(
-                            JSON.stringify(data)
-                        );
+                        globalThis.Android.postAddress(JSON.stringify(data));
                     }
+                } else {
+                    globalThis.webkit.messageHandlers.callBackHandler.postMessage(
+                        data
+                    );
                 }
             }}
         />
