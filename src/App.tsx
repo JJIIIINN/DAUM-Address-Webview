@@ -16,10 +16,12 @@ function App() {
                         )
                     )
                         globalThis.webkit.messageHandlers.callBackHandler.postMessage(
-                            data
+                            JSON.stringify(data)
                         );
                     else {
-                        globalThis.Android.postAddress(JSON.stringify(data));
+                        globalThis.webkit.messageHandlers.callBackHandler.postMessage(
+                            JSON.stringify(data)
+                        );
                     }
                 }
             }}
