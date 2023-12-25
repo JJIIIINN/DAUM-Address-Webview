@@ -11,7 +11,7 @@ function App() {
             onComplete={(data) => {
                 if (mobile) {
                     if (
-                        /iphone|ipad|ipod|mac/i.test(
+                        /iphone|ipad|ipod/i.test(
                             navigator.userAgent.toLowerCase()
                         )
                     )
@@ -21,6 +21,10 @@ function App() {
                     else {
                         globalThis.Android.postAddress(JSON.stringify(data));
                     }
+                } else {
+                    globalThis.webkit.messageHandlers.callBackHandler.postMessage(
+                        data
+                    );
                 }
             }}
         />
