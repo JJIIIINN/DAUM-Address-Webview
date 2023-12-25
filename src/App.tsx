@@ -15,8 +15,8 @@ function App() {
                             navigator.userAgent.toLowerCase()
                         )
                     )
-                        globalThis.webkit.messageHandlers.iOS.postMessage(
-                            JSON.stringify(data)
+                        globalThis.webkit.messageHandlers.callBackHandler.postMessage(
+                            data
                         );
                     else {
                         globalThis.Android.postAddress(JSON.stringify(data));
