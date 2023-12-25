@@ -11,7 +11,7 @@ function App() {
             onComplete={(data) => {
                 if (mobile) {
                     if (
-                        /iPhone|iPad|iPod/i.test(
+                        /iphone|ipad|ipod/i.test(
                             navigator.userAgent.toLowerCase()
                         )
                     )
