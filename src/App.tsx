@@ -12,7 +12,7 @@ function App() {
                             JSON.stringify(data)
                         );
                     else {
-                        globalThis.androidroid.postMessage(JSON.stringify(data));
+                        globalThis.Android.postAddress(JSON.stringify(data));
                     }
                 }
             }}
