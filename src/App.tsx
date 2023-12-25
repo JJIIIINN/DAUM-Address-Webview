@@ -12,7 +12,7 @@ function App() {
                             JSON.stringify(data)
                         );
                     else {
-                        globalThis.androidroid(JSON.stringify(data));
+                        globalThis.androidroid.postMessage(JSON.stringify(data));
                     }
                 }
             }}
